@@ -4,7 +4,7 @@ const todoList = [];
 
 function addTodo(todo) {
   todoList.push(todo);
-  console.log('Todo Added Successfully!');
+  console.log(`${todo}, Added successfully in Todo List!`);
 }
 
 function showTodo() {
@@ -20,10 +20,10 @@ function showTodo() {
 function deleteTodo(todoNumber) {
   if (todoList.length >= todoNumber) {
     let index = todoNumber - 1;
-    todoList.splice(index, 1);
-    console.log('Todo Deleted Successfully!');
+    let deletedTodo=todoList.splice(index, 1);
+    console.log(`Ok, deleted "${deletedTodo}!"`);
   } else {
-    console.log(`Todo ${todoNumber} does not exist`);
+    console.log(`Todo ${todoNumber} does not exist!`);
   }
 }
 
